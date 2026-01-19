@@ -37,9 +37,8 @@ export default function Footer() {
             <h3 className="text-sm font-semibold text-foreground mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Home</a></li>
-              <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Products</a></li>
-              <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">About Us</a></li>
-              <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Contact</a></li>
+              <li><a href='/products' className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Products</a></li>
+              <li><a href='/contact' className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Contact</a></li>
             </ul>
           </div>
 
@@ -78,7 +77,7 @@ export default function Footer() {
 
         <div className="border-t border-border/50 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-foreground/60 text-sm">
-            © 2024 XNova. All rights reserved.
+            © 2026 xnova. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-foreground/60 hover:text-foreground text-sm transition-colors duration-200">Privacy Policy</a>

@@ -133,7 +133,7 @@ export default function Home() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Why Choose XNova?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Why Choose XNOVA?</h2>
             <p className="text-foreground/60 mt-4 text-lg">We provide the best shopping experience for your next laptop</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

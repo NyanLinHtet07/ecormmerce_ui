@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -234,14 +235,14 @@ export default function Contact() {
                 <div className="text-sm text-foreground/60">
                   We typically respond within 24 hours during business days.
                 </div>
-                <button
+                <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                  variant="default"
                 >
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   <Send className="w-4 h-4" />
-                </button>
+                </Button>
               </div>
             </form>
           </div>
