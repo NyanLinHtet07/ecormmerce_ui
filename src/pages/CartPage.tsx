@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ArrowLeft, Plus, Minus, Trash2, CreditCard, ShoppingBag } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
 
 export default function CartPage() {
   const { items, removeFromCart, updateQuantity, clearCart, getTotalPrice, getTotalItems } = useCart()
@@ -54,16 +55,17 @@ export default function CartPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/products"
-                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 transform hover:scale-105"
-              >
-                Browse Products
+                to="/products">
+                  <Button variant="default">
+                    Browse Products
+                  </Button>
+                
               </Link>
               <Link
-                to="/"
-                className="border border-border px-8 py-3 rounded-lg font-semibold hover:bg-accent transition-colors duration-200"
-              >
+                to="/">
+                  <Button variant="secondary">
                 Return Home
+                </Button>
               </Link>
             </div>
           </div>
@@ -149,17 +151,18 @@ export default function CartPage() {
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link
                 to="/products"
-                className="flex items-center space-x-2 px-6 py-3 border border-border/50 rounded-lg font-semibold hover:bg-accent transition-colors duration-200"
               >
+                <Button variant="default">
                 <ArrowLeft className="w-4 h-4" />
                 <span>Continue Shopping</span>
+                </Button>
               </Link>
-              <button
+              <Button variant="outline"
                 onClick={clearCart}
-                className="px-6 py-3 text-foreground/60 hover:text-foreground border border-border/50 rounded-lg font-semibold transition-colors duration-200"
+                
               >
                 Clear Cart
-              </button>
+              </Button>
             </div>
           </div>
 

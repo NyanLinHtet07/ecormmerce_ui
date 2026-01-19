@@ -12,7 +12,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-sm">X</span>
               </div>
               <span className="text-xl font-bold bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                XNova
+                XNOVA
               </span>
             </div>
             <p className="text-foreground/60 mb-4 text-sm leading-relaxed">

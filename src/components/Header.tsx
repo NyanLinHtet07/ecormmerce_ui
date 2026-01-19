@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Search, ShoppingCart } from 'lucide-react'
 import { useCartCount } from '../hooks/useCartCount'
+import { Button } from './ui/button'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -40,13 +41,12 @@ export default function Header() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary uppercase ${
-                  isActive(item.href)
-                    ? 'text-primary border-b-2 border-primary'
-                    : 'text-foreground/70'
-                }`}
+                
               >
-                {item.name}
+                <Button variant="link">
+                        {item.name}
+                </Button>
+            
               </Link>
             ))}
           </nav>
@@ -58,14 +58,16 @@ export default function Header() {
             </button>
             <Link
               to="/cart"
-              className="relative p-2 text-foreground/70 hover:text-foreground transition-colors duration-200"
+              
             >
+              <Button variant="link" className="relative p-2 text-foreground/70 hover:text-foreground transition-colors duration-200">
               <ShoppingCart className="w-5 h-5" />
               {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
                   {cartCount}
                 </span>
               )}
+              </Button>
             </Link>
           </div>
 
