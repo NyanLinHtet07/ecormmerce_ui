@@ -8,25 +8,25 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-linear-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">X</span>
+              <div className=" w-24 h-24">
+                <img src="./logo.png" alt="" className=' object-center' />
               </div>
-              <span className="text-xl font-bold bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <span className="text-3xl text-cyan-800 font-bold bg-linear-to-r from-foreground to-foreground/70 bg-clip-text">
                 XNOVA
               </span>
             </div>
-            <p className="text-foreground/60 mb-4 text-sm leading-relaxed">
+            <p className="text-cyan-900/90 mb-4 text-sm leading-relaxed">
               Your trusted destination for premium laptops. We offer the latest technology 
               from top brands at competitive prices with exceptional customer service.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200">
+              <a href="#" className="text-cyan-800/60 hover:text-foreground transition-colors duration-200">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200">
+              <a href="#" className="text-cyan-800/60 hover:text-foreground transition-colors duration-200">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200">
+              <a href="#" className="text-cyan-800/60 hover:text-foreground transition-colors duration-200">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -34,20 +34,20 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">Quick Links</h3>
+            <h3 className="text-sm font-semibold text-cyan-800 mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Home</a></li>
-              <li><a href='/products' className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Products</a></li>
-              <li><a href='/contact' className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Contact</a></li>
+              <li><a href="#" className="text-cyan-800/60 hover:text-foreground transition-colors duration-200 text-sm">Home</a></li>
+              <li><a href='/products' className=" text-cyan-800/60 hover:text-foreground transition-colors duration-200 text-sm">Products</a></li>
+              <li><a href='/contact' className="text-cyan-800/60 hover:text-foreground transition-colors duration-200 text-sm">Contact</a></li>
             </ul>
           </div>
 
           {/* Brands */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">Brands</h3>
+            <h3 className="text-sm font-semibold text-cyan-800  mb-4">Brands</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Apple</a></li>
-              <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Dell</a></li>
+              <li><a href="#" className="text-cyan-800/60 hover:text-foreground transition-colors duration-200 text-sm">Apple</a></li>
+              <li><a href="#" className="text-cyan-800/60 hover:text-foreground transition-colors duration-200 text-sm">Dell</a></li>
               <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">HP</a></li>
               <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">Lenovo</a></li>
               <li><a href="#" className="text-foreground/60 hover:text-foreground transition-colors duration-200 text-sm">ASUS</a></li>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">Contact Us</h3>
+            <h3 className="text-sm font-semibold text-cyan-800  mb-4">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-foreground/60">
                 <MapPin className="w-4 h-4" />
@@ -80,9 +80,9 @@ export default function Footer() {
             © 2026 xnova. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-foreground/60 hover:text-foreground text-sm transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="text-foreground/60 hover:text-foreground text-sm transition-colors duration-200">Terms of Service</a>
-            <a href="#" className="text-foreground/60 hover:text-foreground text-sm transition-colors duration-200">Shipping & Returns</a>
+            <a href="#" className="text-cyan-800/60 hover:text-foreground text-sm transition-colors duration-200">Privacy Policy</a>
+            <a href="#" className="text-cyan-800/60 hover:text-foreground text-sm transition-colors duration-200">Terms of Service</a>
+            <a href="#" className="text-cyan-800/60 hover:text-foreground text-sm transition-colors duration-200">Shipping & Returns</a>
           </div>
         </div>
       </div>

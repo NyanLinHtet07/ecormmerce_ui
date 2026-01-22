@@ -38,8 +38,8 @@ export default function CartPage() {
         <section className="bg-gradient-to-br from-background via-background to-primary/5 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground">Your Cart</h1>
-              <p className="text-foreground/60 mt-4 text-lg">Your shopping cart is empty</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-cyan-900">Your Cart</h1>
+              <p className="text-cyan-900 mt-4 text-lg">Your shopping cart is empty</p>
             </div>
           </div>
         </section>
@@ -49,8 +49,8 @@ export default function CartPage() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mx-auto mb-6">
               <ShoppingBag className="w-10 h-10 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-foreground mb-4">Your cart is empty</h2>
-            <p className="text-foreground/60 mb-8 max-w-md mx-auto">
+            <h2 className="text-2xl font-bold text-cyan-900 mb-4">Your cart is empty</h2>
+            <p className="text-cyan-900 mb-8 max-w-md mx-auto">
               Looks like you haven't added any laptops to your cart yet. Start shopping to find your perfect device!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -80,8 +80,8 @@ export default function CartPage() {
       <section className="bg-gradient-to-br from-background via-background to-primary/5 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">Your Cart</h1>
-            <p className="text-foreground/60 mt-4 text-lg">{getTotalItems()} items in your cart</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-cyan-900">Your Cart</h1>
+            <p className="text-cyan-900 mt-4 text-lg">{getTotalItems()} items in your cart</p>
           </div>
         </div>
       </section>
@@ -101,20 +101,20 @@ export default function CartPage() {
                     />
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-foreground">{item.name}</h3>
+                        <h3 className="text-lg font-semibold text-cyan-900">{item.name}</h3>
                         <button
                           onClick={() => removeFromCart(item.id)}
-                          className="p-2 text-foreground/60 hover:text-foreground transition-colors duration-200"
+                          className="p-2 text-cyan-900 hover:text-cyan-700 transition-colors duration-200"
                         >
                           <Trash2 className="w-5 h-5" />
                         </button>
                       </div>
-                      <p className="text-sm text-foreground/60 mb-4">{item.brand}</p>
+                      <p className="text-sm text-cyan-900 mb-4">{item.brand}</p>
                       
                       {/* Quantity Controls */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
-                          <span className="text-sm text-foreground/60">Quantity:</span>
+                          <span className="text-sm text-cyan-900">Quantity:</span>
                           <div className="flex items-center border border-border/50 rounded-lg overflow-hidden">
                             <button
                               onClick={() => updateQuantity(item.id, item.quantity - 1)}
@@ -122,7 +122,7 @@ export default function CartPage() {
                             >
                               <Minus className="w-4 h-4" />
                             </button>
-                            <span className="px-4 py-2 text-foreground font-medium">{item.quantity}</span>
+                            <span className="px-4 py-2 text-cyan-900 font-medium">{item.quantity}</span>
                             <button
                               onClick={() => updateQuantity(item.id, item.quantity + 1)}
                               className="p-2 hover:bg-accent transition-colors duration-200"
@@ -152,7 +152,7 @@ export default function CartPage() {
               <Link
                 to="/products"
               >
-                <Button variant="default">
+                <Button variant="default" className=' bg-cyan-800'>
                 <ArrowLeft className="w-4 h-4" />
                 <span>Continue Shopping</span>
                 </Button>
@@ -169,23 +169,23 @@ export default function CartPage() {
           {/* Order Summary */}
           <div className="lg:col-span-1">
             <div className="bg-card rounded-xl p-6 shadow-sm border border-border/50 sticky top-24">
-              <h2 className="text-xl font-bold text-foreground mb-6">Order Summary</h2>
+              <h2 className="text-xl font-bold text-cyan-900 mb-6">Order Summary</h2>
               
               <div className="space-y-4 mb-6">
-                <div className="flex justify-between text-foreground">
+                <div className="flex justify-between text-cyan-900">
                   <span>Subtotal ({getTotalItems()} items)</span>
                   <span>{formatPrice(getTotalPrice())}</span>
                 </div>
-                <div className="flex justify-between text-foreground/60 text-sm">
+                <div className="flex justify-between text-cyan-900 text-sm">
                   <span>Shipping</span>
                   <span>Calculated at checkout</span>
                 </div>
-                <div className="flex justify-between text-foreground/60 text-sm">
+                <div className="flex justify-between text-cyan-900 text-sm">
                   <span>Tax</span>
                   <span>Included</span>
                 </div>
                 <div className="border-t border-border/50 pt-4">
-                  <div className="flex justify-between text-lg font-bold text-foreground">
+                  <div className="flex justify-between text-lg font-bold text-cyan-900">
                     <span>Total</span>
                     <span>{formatPrice(getTotalPrice())}</span>
                   </div>
@@ -196,20 +196,20 @@ export default function CartPage() {
                 <button
                   onClick={handleCheckout}
                   disabled={isProcessing}
-                  className="w-full flex items-center justify-center space-x-3 bg-primary text-primary-foreground px-6 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full flex items-center justify-center space-x-3 bg-cyan-800 text-primary-foreground px-6 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <CreditCard className="w-5 h-5" />
                   <span>{isProcessing ? 'Processing...' : 'Proceed to Checkout'}</span>
                 </button>
                 
-                <p className="text-xs text-foreground/60 text-center">
+                <p className="text-xs text-cyan-900 text-center">
                   By proceeding, you agree to our Terms of Service and Privacy Policy
                 </p>
               </div>
 
               {/* Security Badges */}
               <div className="mt-6 pt-6 border-t border-border/50">
-                <div className="flex items-center justify-center space-x-4 text-xs text-foreground/60">
+                <div className="flex items-center justify-center space-x-4 text-xs text-cyan-900">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     <span>Secure Checkout</span>

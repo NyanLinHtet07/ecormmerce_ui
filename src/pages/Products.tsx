@@ -59,13 +59,13 @@ export default function Products() {
       {/* Page Header */}
       <section className="bg-linear-to-br from-background via-background to-primary/5 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">Our Laptop Collection</h1>
-            <p className="text-foreground/60 mt-4 text-lg">Find the perfect laptop for your needs</p>
-            <div className="mt-6 text-foreground/60">
-              {filteredProducts.length} laptops found
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold text-cyan-900">Our Laptop Collection</h1>
+              <p className="text-cyan-900 mt-4 text-lg">Find the perfect laptop for your needs</p>
+              <div className="mt-6 text-cyan-900">
+                {filteredProducts.length} laptops found
+              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -74,22 +74,12 @@ export default function Products() {
           {/* Filters Sidebar */}
           <aside className="lg:col-span-1">
             <div className="bg-card rounded-xl p-6 shadow-sm border border-border/50">
-              <div className="flex items-center justify-between mb-4 lg:hidden">
-                <h2 className="text-lg font-semibold text-foreground">Filters</h2>
-                <button
-                  onClick={() => setShowFilters(!showFilters)}
-                  className="lg:hidden p-2 text-foreground/60 hover:text-foreground transition-colors duration-200"
-                >
-                  {showFilters ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
-                </button>
-              </div>
-
-              <div className={`space-y-6 ${showFilters ? 'block' : 'hidden lg:block'}`}>
+              <div className="space-y-6">
                 {/* Search */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Search</label>
+                  <label className="block text-sm font-medium text-cyan-900 mb-2">Search</label>
                   <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-foreground/40 w-4 h-4" />
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-900/40 w-4 h-4" />
                     <input
                       type="text"
                       placeholder="Search laptops..."
@@ -102,7 +92,7 @@ export default function Products() {
 
                 {/* Brand Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Brand</label>
+                  <label className="block text-sm font-medium text-cyan-900 mb-2">Brand</label>
                   <div className="space-y-2">
                     <label className="flex items-center space-x-3 cursor-pointer">
                       <input
@@ -113,7 +103,7 @@ export default function Products() {
                         onChange={(e) => setSelectedBrand(e.target.value)}
                         className="text-primary focus:ring-primary"
                       />
-                      <span className="text-foreground/70">All Brands</span>
+                      <span className="text-cyan-900/70">All Brands</span>
                     </label>
                     {brands.map((brand) => (
                       <label key={brand.id} className="flex items-center space-x-3 cursor-pointer">
@@ -125,7 +115,7 @@ export default function Products() {
                           onChange={(e) => setSelectedBrand(e.target.value)}
                           className="text-primary focus:ring-primary"
                         />
-                        <span className="text-foreground/70">{brand.name}</span>
+                        <span className="text-cyan-900/70">{brand.name}</span>
                       </label>
                     ))}
                   </div>
@@ -133,9 +123,9 @@ export default function Products() {
 
                 {/* Price Range */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Price Range</label>
+                  <label className="block text-sm font-medium text-cyan-900 mb-2">Price Range</label>
                   <div className="space-y-2">
-                    <div className="flex justify-between text-sm text-foreground/60">
+                    <div className="flex justify-between text-sm text-cyan-900/60">
                       <span>{formatPrice(priceRange[0])}</span>
                       <span>{formatPrice(priceRange[1])}</span>
                     </div>
@@ -153,7 +143,7 @@ export default function Products() {
 
                 {/* Sort */}
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Sort By</label>
+                  <label className="block text-sm font-medium text-cyan-900 mb-2">Sort By</label>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
@@ -174,7 +164,7 @@ export default function Products() {
             {/* Toolbar */}
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
               <div className="flex items-center space-x-4">
-                <div className="text-foreground/60 text-sm">
+                <div className="text-cyan-900/60 text-sm">
                   {filteredProducts.length} {filteredProducts.length === 1 ? 'laptop' : 'laptops'}
                   {selectedBrand && ` • ${selectedBrand}`}
                 </div>
@@ -183,13 +173,13 @@ export default function Products() {
               <div className="flex items-center space-x-2">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-primary/10 text-primary' : 'text-foreground/60 hover:text-foreground'}`}
+                  className={`p-2 rounded-lg ${viewMode === 'grid' ? 'bg-primary/10 text-primary' : 'text-cyan-900/60 hover:text-cyan-900'}`}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-primary/10 text-primary' : 'text-foreground/60 hover:text-foreground'}`}
+                  className={`p-2 rounded-lg ${viewMode === 'list' ? 'bg-primary/10 text-primary' : 'text-cyan-900/60 hover:text-cyan-900'}`}
                 >
                   <List className="w-5 h-5" />
                 </button>
@@ -199,7 +189,7 @@ export default function Products() {
             {/* Products */}
             {filteredProducts.length === 0 ? (
               <div className="text-center py-12">
-                <div className="text-foreground/40 text-sm">No laptops found matching your criteria.</div>
+                <div className="text-cyan-900/40 text-sm">No laptops found matching your criteria.</div>
                 <button
                   onClick={() => {
                     setSearchTerm('')
@@ -226,7 +216,7 @@ export default function Products() {
                   >
                     {/* Image */}
                     <div className={viewMode === 'grid' 
-                      ? "relative overflow-hidden"
+                      ? "relative h-56 overflow-hidden"
                       : "relative w-full md:w-48 h-48 md:h-auto overflow-hidden rounded-lg"
                     }>
                       <img 
@@ -249,28 +239,28 @@ export default function Products() {
                     {/* Content */}
                     <div className={viewMode === 'grid' ? "p-6" : "flex-1 p-4 md:p-0"}>
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm text-foreground/60 font-medium">{product.brand}</span>
+                        <span className="text-sm text-cyan-900/60 font-medium">{product.brand}</span>
                         <div className="flex items-center space-x-1">
                           <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                          <span className="text-sm text-foreground/60">{product.rating}</span>
-                          <span className="text-sm text-foreground/40">({product.reviews})</span>
+                          <span className="text-sm text-cyan-900/60">{product.rating}</span>
+                          <span className="text-sm text-cyan-900/40">({product.reviews})</span>
                         </div>
                       </div>
                       
-                      <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-200">
+                      <h3 className="text-lg font-semibold text-cyan-900 mb-2 group-hover:text-primary transition-colors duration-200">
                         {product.name}
                       </h3>
                       
                       <p className={viewMode === 'grid' 
-                        ? "text-foreground/60 text-sm mb-4 line-clamp-2"
-                        : "text-foreground/60 text-sm mb-4"
+                        ? "text-cyan-800  text-sm mb-4 line-clamp-2"
+                        : "text-cyan-800 text-sm mb-4"
                       }>
                         {product.description}
                       </p>
 
                       {/* Specifications (List view only) */}
                       {viewMode === 'list' && (
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4 text-sm text-foreground/60">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4 text-sm text-cyan-900/60">
                           <div>
                             <span className="font-medium">Processor:</span>
                             <div>{product.specifications.processor}</div>
@@ -292,18 +282,18 @@ export default function Products() {
                       
                       <div className="flex items-center justify-between">
                         <div className="space-y-1">
-                          <div className="text-lg font-bold text-foreground">
+                          <div className="text-lg font-bold text-cyan-900">
                             {formatPrice(product.price)}
                           </div>
                           {product.originalPrice && (
-                            <div className="text-sm text-foreground/50 line-through">
+                            <div className="text-sm text-cyan-900/50 line-through">
                               {formatPrice(product.originalPrice)}
                             </div>
                           )}
                         </div>
                         <button 
                           onClick={() => addToCart(product)}
-                          className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="bg-cyan-700 text-primary-foreground px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                           disabled={!product.inStock}
                         >
                           {product.inStock ? 'Add to Cart' : 'Out of Stock'}

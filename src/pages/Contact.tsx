@@ -73,8 +73,8 @@ export default function Contact() {
       <section className="bg-linear-to-br from-background via-background to-primary/5 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground">Get In Touch</h1>
-            <p className="text-foreground/60 mt-4 text-lg">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-cyan-900">Get In Touch</h1>
+            <p className="text-cyan-900 mt-4 text-lg">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
           </div>
         </div>
       </section>
@@ -84,8 +84,8 @@ export default function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">Contact Information</h2>
-              <p className="text-foreground/60 mb-8">
+              <h2 className="text-3xl font-bold text-cyan-900 mb-6">Contact Information</h2>
+              <p className="text-cyan-900 mb-8">
                 Reach out to us through any of the channels below. Our team is ready to assist you 
                 with any questions or concerns you may have.
               </p>
@@ -99,10 +99,10 @@ export default function Contact() {
                     {info.icon}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
+                    <h3 className="font-semibold text-cyan-900 mb-1">{info.title}</h3>
                     <a 
                       href={info.href}
-                      className="text-foreground/60 hover:text-foreground transition-colors duration-200"
+                      className="text-cyan-900 hover:text-cyan-700 transition-colors duration-200"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -117,13 +117,13 @@ export default function Contact() {
             <div className="bg-card rounded-xl p-6 border border-border/50">
               <div className="flex items-center space-x-3 mb-4">
                 <Clock className="w-6 h-6 text-primary" />
-                <h3 className="text-lg font-semibold text-foreground">Business Hours</h3>
+                <h3 className="text-lg font-semibold text-cyan-900">Business Hours</h3>
               </div>
               <div className="space-y-2">
                 {businessHours.map((hour, index) => (
                   <div key={index} className="flex justify-between">
-                    <span className="text-foreground/60">{hour.day}</span>
-                    <span className="font-medium text-foreground">{hour.hours}</span>
+                    <span className="text-cyan-900">{hour.day}</span>
+                    <span className="font-medium text-cyan-900">{hour.hours}</span>
                   </div>
                 ))}
               </div>
@@ -131,18 +131,18 @@ export default function Contact() {
 
             {/* Social Media */}
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-4">Follow Us</h3>
+              <h3 className="text-lg font-semibold text-cyan-900 mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
+                <a href="#" className="w-10 h-10 bg-cyan-700/20 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
                   <span className="text-sm font-bold">f</span>
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
+                <a href="#" className="w-10 h-10 bg-cyan-700/20 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
                   <span className="text-sm font-bold">t</span>
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
+                <a href="#" className="w-10 h-10 bg-cyan-700/20 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
                   <span className="text-sm font-bold">in</span>
                 </a>
-                <a href="#" className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
+                <a href="#" className="w-10 h-10 bg-cyan-700/20 rounded-full flex items-center justify-center text-primary hover:bg-primary/20 transition-colors duration-200">
                   <span className="text-sm font-bold">ig</span>
                 </a>
               </div>
@@ -151,7 +151,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="bg-card rounded-xl p-8 shadow-sm border border-border/50">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Send Us a Message</h2>
+            <h2 className="text-3xl font-bold text-cyan-900 mb-6">Send Us a Message</h2>
             
             {submitStatus === 'success' && (
               <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
@@ -168,7 +168,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-cyan-900 mb-2">
                     Your Name
                   </label>
                   <input
@@ -183,7 +183,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-cyan-900 mb-2">
                     Email Address
                   </label>
                   <input
@@ -200,7 +200,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-cyan-900 mb-2">
                   Subject
                 </label>
                 <input
@@ -216,7 +216,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-cyan-900 mb-2">
                   Message
                 </label>
                 <textarea
@@ -232,13 +232,14 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="text-sm text-foreground/60">
+                <div className="text-sm text-cyan-900">
                   We typically respond within 24 hours during business days.
                 </div>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
                   variant="default"
+                  className='bg-cyan-800'
                 >
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   <Send className="w-4 h-4" />
